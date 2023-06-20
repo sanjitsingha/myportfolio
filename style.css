@@ -11,15 +11,15 @@
 }
 @font-face {
   font-family: BlackExt;
-  src: url(./fonts/Resolve-BlackExt.ttf);
+  src: url(./Resolve-BlackExt.ttf);
 }
 @font-face {
   font-family: BlackExtItalic;
-  src: url(./fonts/Resolve-BlackExtIta.ttf);
+  src: url(./Resolve-BlackExtIta.ttf);
 }
 @font-face {
   font-family: BoldItalic;
-  src: url(./fonts/Resolve-BoldWdIta.ttf);
+  src: url(./Resolve-BoldWdIta.ttf);
 }
 html {
   scroll-behavior: smooth;
