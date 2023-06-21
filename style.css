@@ -25,7 +25,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(./Images/bg.jpg);
+  background-image: url(bg.jpg);
   background-size: contain;
   background-blend-mode: luminosity;
   background-repeat: repeat;
