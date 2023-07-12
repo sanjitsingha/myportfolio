@@ -11,21 +11,21 @@
 }
 @font-face {
   font-family: BlackExt;
-  src: url(./Resolve-BlackExt.ttf);
+  src: url(./fonts/Resolve-BlackExt.ttf);
 }
 @font-face {
   font-family: BlackExtItalic;
-  src: url(./Resolve-BlackExtIta.ttf);
+  src: url(./fonts/Resolve-BlackExtIta.ttf);
 }
 @font-face {
   font-family: BoldItalic;
-  src: url(./Resolve-BoldWdIta.ttf);
+  src: url(./fonts/Resolve-BoldWdIta.ttf);
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(./bg.jpg);
+  background-image: url(./Images/bg.jpg);
   background-size: contain;
   background-blend-mode: luminosity;
   background-repeat: repeat;
@@ -35,6 +35,14 @@ body {
   --orange-color: #ffa304;
   --dark-color: #141414;
   --secondary: #202020;
+}
+.cursor{
+  width: 30px;
+  height: 30px;
+  background-color: #ffa304;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
 }
 .logo {
   margin-right: 100px;
@@ -59,7 +67,11 @@ body {
 .nav-items li a:hover {
   font-weight: 700;
 }
-nav {
+.nav {
+  /* position: fixed; */
+  top: 0px;
+  left: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,8 +310,49 @@ button {
   transform: translate(0, 5%);
 }
 
+.scroller{
+  /* bac/kground: red; */
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+@keyframes scroll {
+  from{
+    transform: translateX(0);
+
+  }
+  to{
+    transform: translateX(-100%);
+  }
+  
+}
+.scroller-in{
+  display: inline-block;
+  animation-name: scroll;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.scroller-in h4{
+  text-transform: uppercase;
+  margin-right: 100px;
+  display: inline-block;
+  font-weight: 900;
+  color: transparent;
+  transition: linear 0.4s;
+  -webkit-text-stroke: 1px  #ffa304;
+  font-size: 120px;
+}
+.scroller-in h4:hover{
+  -webkit-text-stroke: transparent;
+  color: #141414;
+}
 .more-about {
-  margin-top: 100px;
+  margin-top: 20px;
   padding: 20px 250px;
 }
 .more-about h3 {
@@ -477,6 +530,13 @@ button {
 }
 
 @media screen and (max-width: 650px) {
+  .scroller-in h4{
+    margin-right: 30px;
+    font-size: 60px;
+  }
+  .cursor{
+    display: none;
+  }
   .glass-box {
   
     
